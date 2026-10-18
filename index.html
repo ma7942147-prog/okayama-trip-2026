@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>岡山家族旅行手冊 2026/11/23–27</title>
+<style>
+:root{
+  --bg:#faf8f5; --card:#fff; --ink:#22201d; --sub:#6b6560;
+  --line:#e6e1da; --accent:#9c4221; --accent2:#7b5e3b;
+  --warn:#b45309; --warnbg:#fef6e7; --ok:#2f6b4f; --okbg:#eaf3ee;
+  --tagbg:#f0ebe3;
+}
+*{box-sizing:border-box;-webkit-text-size-adjust:100%}
+body{
+  margin:0;background:var(--bg);color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;
+  line-height:1.7;font-size:16px;
+}
+.wrap{max-width:820px;margin:0 auto;padding:0 16px 80px}
+
+/* header */
+header{
+  background:linear-gradient(150deg,#8c3a1e,#b8683f);
+  color:#fff;padding:34px 16px 28px;margin-bottom:20px;
+}
+header .inner{max-width:820px;margin:0 auto}
+header h1{margin:0 0 6px;font-size:1.55rem;letter-spacing:.5px}
+header .dates{font-size:1rem;opacity:.92;margin:0}
+header .meta{margin-top:14px;font-size:.85rem;opacity:.85;line-height:1.6}
+
+/* nav */
+nav{
+  position:sticky;top:0;z-index:20;background:rgba(250,248,245,.96);
+  backdrop-filter:blur(8px);border-bottom:1px solid var(--line);
+  margin:0 -16px 22px;padding:9px 16px;overflow-x:auto;white-space:nowrap;
+  -webkit-overflow-scrolling:touch;
+}
+nav a{
+  display:inline-block;padding:5px 12px;margin-right:6px;font-size:.83rem;
+  color:var(--accent);text-decoration:none;border:1px solid var(--line);
+  border-radius:999px;background:var(--card);
+}
+nav a:active{background:var(--tagbg)}
+
+/* cards */
+section{margin-bottom:30px}
+h2{
+  font-size:1.18rem;margin:0 0 14px;padding-bottom:8px;
+  border-bottom:2px solid var(--accent);display:flex;align-items:center;gap:8px;
+}
+h2 .n{
+  background:var(--accent);color:#fff;font-size:.75rem;
+  padding:2px 9px;border-radius:4px;font-weight:600;
+}
+.card{
+  background:var(--card);border:1px solid var(--line);border-radius:10px;
+  padding:16px;margin-bottom:14px;
+}
+.card h3{margin:0 0 10px;font-size:1rem;color:var(--accent2)}
+.card h3 small{font-weight:400;color:var(--sub);font-size:.8rem;margin-left:6px}
+
+/* key-value */
+.kv{width:100%;border-collapse:collapse;font-size:.9rem}
+.kv th{
+  text-align:left;padding:7px 10px 7px 0;color:var(--sub);font-weight:500;
+  white-space:nowrap;vertical-align:top;width:34%;border-bottom:1px solid var(--line);
+}
+.kv td{padding:7px 0;border-bottom:1px solid var(--line);vertical-align:top}
+.kv tr:last-child th,.kv tr:last-child td{border-bottom:none}
+
+/* timeline */
+.tl{list-style:none;margin:0;padding:0}
+.tl li{
+  display:flex;gap:12px;padding:11px 0;border-bottom:1px dashed var(--line);
+}
+.tl li:last-child{border-bottom:none}
+.tl .t{
+  flex:0 0 62px;font-variant-numeric:tabular-nums;font-weight:600;
+  color:var(--accent);font-size:.9rem;padding-top:1px;
+}
+.tl .c{flex:1;font-size:.93rem}
+.tl .c b{display:block;margin-bottom:2px}
+.tl .c span{color:var(--sub);font-size:.84rem;display:block}
+
+/* notes */
+.note{
+  border-left:3px solid var(--warn);background:var(--warnbg);
+  padding:11px 13px;border-radius:0 7px 7px 0;font-size:.87rem;margin:12px 0;
+}
+.note b{color:var(--warn)}
+.good{
+  border-left:3px solid var(--ok);background:var(--okbg);
+  padding:11px 13px;border-radius:0 7px 7px 0;font-size:.87rem;margin:12px 0;
+}
+.good b{color:var(--ok)}
+
+/* tags */
+.tag{
+  display:inline-block;background:var(--tagbg);color:var(--accent2);
+  font-size:.74rem;padding:2px 8px;border-radius:4px;margin:0 4px 4px 0;
+}
+
+/* table scroll */
+.scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:0 -4px}
+table.dt{width:100%;border-collapse:collapse;font-size:.85rem;min-width:440px}
+table.dt th{
+  background:var(--tagbg);text-align:left;padding:8px 10px;
+  font-weight:600;border-bottom:1px solid var(--line);white-space:nowrap;
+}
+table.dt td{padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+table.dt tr:last-child td{border-bottom:none}
+
+/* checklist */
+.chk{list-style:none;margin:0;padding:0}
+.chk li{
+  display:flex;gap:10px;align-items:flex-start;padding:9px 0;
+  border-bottom:1px dashed var(--line);font-size:.9rem;
+}
+.chk li:last-child{border-bottom:none}
+.chk input{margin-top:5px;flex:0 0 auto;width:17px;height:17px;accent-color:var(--accent)}
+.chk label{cursor:pointer}
+.chk .when{color:var(--sub);font-size:.79rem;display:block;margin-top:1px}
+
+/* code */
+pre{
+  background:#2e2a26;color:#f2ede6;padding:14px;border-radius:8px;
+  overflow-x:auto;font-size:.79rem;line-height:1.65;white-space:pre-wrap;
+  word-break:break-word;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+}
+.copy{
+  background:var(--accent);color:#fff;border:none;border-radius:6px;
+  padding:7px 15px;font-size:.82rem;cursor:pointer;margin-top:8px;
+}
+.copy:active{opacity:.8}
+
+a{color:var(--accent)}
+.links li{margin-bottom:8px;font-size:.9rem}
+footer{
+  text-align:center;color:var(--sub);font-size:.78rem;
+  padding:26px 16px;border-top:1px solid var(--line);margin-top:36px;line-height:1.8;
+}
+@media(max-width:520px){
+  header h1{font-size:1.3rem}
+  .tl .t{flex:0 0 54px;font-size:.85rem}
+  .kv th{width:38%}
+}
+@media print{
+  nav{display:none}
+  body{background:#fff}
+  .card{break-inside:avoid}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="inner">
+    <h1>岡山家族旅行手冊</h1>
+    <p class="dates">2026 年 11 月 23 日（一）– 11 月 27 日（五）／5 天 4 夜</p>
+    <div class="meta">
+      成員：3 人（本人・太太・女兒）　·　台灣虎航直飛　·　住宿 Zen house 2<br>
+      正逢後樂園「秋之幻想庭園」夜間點燈期間（11/20–11/29）
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+
+<nav>
+  <a href="#info">基本資訊</a>
+  <a href="#d1">D1 抵達</a>
+  <a href="#d2">D2 倉敷</a>
+  <a href="#d3">D3 備前燒</a>
+  <a href="#d4">D4 岡山市區</a>
+  <a href="#d5">D5 返程</a>
+  <a href="#alt">備選方案</a>
+  <a href="#traffic">交通速查</a>
+  <a href="#food">美食</a>
+  <a href="#todo">出發前待辦</a>
+  <a href="#mail">詢問信</a>
+  <a href="#links">連結</a>
+</nav>
+
+<!-- ============ 基本資訊 ============ -->
+<section id="info">
+  <h2><span class="n">01</span>基本資訊</h2>
+
+  <div class="card">
+    <h3>航班 <small>台灣虎航・已開票（訂單已確認）</small></h3>
+    <table class="kv" style="margin-bottom:12px">
+      <tr><th>訂單狀態</th><td><b style="color:var(--ok)">已確認</b></td></tr>
+      <tr><th>訂單金額</th><td><b>TWD 49,143</b>　<span style="color:var(--sub);font-size:.82rem">（三人來回總價，含行李／選位等加購）</span></td></tr>
+    </table>
+    <div class="scroll">
+      <table class="dt">
+        <tr><th>日期</th><th>航段</th><th>班次</th><th>起飛</th><th>抵達</th><th>飛行</th></tr>
+        <tr><td>11/23（一）</td><td>台北桃園 TPE → 岡山 OKJ</td><td>IT214</td><td><b>11:10</b></td><td><b>14:35</b></td><td>2 小時 25 分</td></tr>
+        <tr><td>11/27（五）</td><td>岡山 OKJ → 台北桃園 TPE</td><td>IT215</td><td><b>15:25</b></td><td><b>17:30</b></td><td>3 小時 5 分</td></tr>
+      </table>
+    </div>
+    <div class="good">
+      <b>已開票確認。</b>去回程時刻與本手冊各日行程一致（去程 11:10 起飛、回程 15:25 起飛）。
+      D1 抵達與 D5 返程時間皆依此排定，無需再改。
+    </div>
+    <div class="note">
+      <b>出發前仍請留意：</b>虎航偶有航班時刻微調通知。10 月後若收到 IT214／IT215 的異動 email，記得回頭調整 D1 與 D5 的時間。
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>住宿 <small>Zen house 2 – Entire Place</small></h3>
+    <table class="kv">
+      <tr><th>評分</th><td>4.5★（Google 顯示）</td></tr>
+      <tr><th>價格</th><td>NT$4,188　<span style="color:var(--sub);font-size:.82rem">（訂房前請確認是每晚價或總價）</span></td></tr>
+      <tr><th>房型</th><td>整棟出租公寓／2 間臥室／3 張床／1 間浴室／可住 5 人</td></tr>
+      <tr><th>位置</th><td>岡山市北區 下伊福・富町一帶（岡山站西側）</td></tr>
+      <tr><th>到岡山站西口</th><td>步行約 <b>11–13 分</b>（實走約 900 公尺）</td></tr>
+      <tr><th>入住方式</th><td>【待確認】民泊多為自助入住（密碼鎖／鑰匙箱）</td></tr>
+    </table>
+    <div class="good">
+      <b>選它的理由：</b>四間候選中唯一有 <b>2 間臥室</b>，三個成人可分房睡。評分 4.5★ 扎實，
+      且位於岡山站<b>西側</b>——機場巴士乘車處正是西口。
+    </div>
+    <div class="note">
+      <b>抵達當天要留意：</b>11 月底岡山日落約 17:00，你們約 16:00 才到岡山站，
+      走到住處時<b>天色已暗</b>。請事先向房東索取門口照片、地圖與開鎖影片。
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>本趟行程的兩個時間硬限制</h3>
+    <ul style="margin:0;padding-left:18px;font-size:.9rem">
+      <li><b>第一天下午才開始</b>：14:35 落地，進市區約 16:00，等於半天。</li>
+      <li><b>最後一天只有早上</b>：回程機場巴士 <b>12:55 從岡山站西口發車</b>，12:30 前必須到位。</li>
+    </ul>
+    <p style="margin:10px 0 0;font-size:.88rem;color:var(--sub)">
+      實際可用：<b>3 個整天 + 2 個半天</b>。行程已依此設計，不排長距離移動。
+    </p>
+  </div>
+</section>
+
+<!-- ============ DAY 1 ============ -->
+<section id="d1">
+  <h2><span class="n">D1</span>11/23（一）抵達 · 後樂園夜楓</h2>
+
+  <div class="card">
+    <span class="tag">日本國定假日・勤勞感謝日</span>
+    <span class="tag">三連休最後一天</span>
+    <span class="tag">夜間點燈</span>
+    <ul class="tl">
+      <li><span class="t">08:30</span><span class="c"><b>抵達桃園機場</b><span>虎航為廉航，國際線建議提早 2.5 小時報到</span></span></li>
+      <li><span class="t">11:10</span><span class="c"><b>桃園機場起飛　IT214</b><span>飛行 2 小時 25 分</span></span></li>
+      <li><span class="t">14:35</span><span class="c"><b>抵達岡山桃太郎機場</b><span>入境、領行李約 30–45 分</span></span></li>
+      <li><span class="t">15:20</span><span class="c"><b>搭利木津巴士前往岡山站</b><span>機場有配合國際線抵達的加班車。可用 ICOCA／Suica 或自動售票機購票，車程約 30 分</span></span></li>
+      <li><span class="t">16:00</span><span class="c"><b>岡山站西口</b><span>步行約 12 分至 Zen house 2</span></span></li>
+      <li><span class="t">16:20</span><span class="c"><b>入住、放行李</b><span>只放行李，不要久留</span></span></li>
+      <li><span class="t">17:10</span><span class="c"><b>路面電車 岡山站前 → 城下</b><span>東山線，約 5 分。城下站下車步行約 10 分到後樂園</span></span></li>
+      <li><span class="t">17:40</span><span class="c"><b>後樂園「秋之幻想庭園」</b><span>夜間特別開園 17:00–20:30（最終入園 20:00）。成人 ¥500、65 歲以上 ¥200、高中生以下免費</span></span></li>
+      <li><span class="t">20:00</span><span class="c"><b>晚餐</b><span>岡山站前或奉還町商店街</span></span></li>
+    </ul>
+    <div class="good">
+      <b>今天的價值：</b>秋之幻想庭園 2026 年只辦 <b>11/20–11/29</b> 共十天，你們整段行程都在期間內。
+      抵達當晚就先看一次，若當天天氣不好，11/25 或 11/26 晚上都還有機會補看。
+    </div>
+    <div class="note">
+      <b>人潮提醒：</b>11/21（六）–11/23（一）是日本三連休，加上點燈檔期，
+      後樂園與岡山站周邊會相當擁擠。若帶行李移動，預留比平常多 15 分鐘。
+    </div>
+  </div>
+</section>
+
+<!-- ============ DAY 2 ============ -->
+<section id="d2">
+  <h2><span class="n">D2</span>11/24（二）倉敷美觀地區</h2>
+
+  <div class="card">
+    <span class="tag">全日</span>
+    <span class="tag">人潮最少的一天</span>
+    <span class="tag">川舟票要先搶</span>
+    <ul class="tl">
+      <li><span class="t">08:50</span><span class="c"><b>JR 岡山站 → 倉敷站</b><span>山陽本線，約 17 分</span></span></li>
+      <li><span class="t">09:10</span><span class="c"><b>倉敷站，步行前往美觀地區</b><span>約 10–15 分</span></span></li>
+      <li><span class="t">09:30</span><span class="c"><b>★ 倉敷館觀光案內所　買川舟票</b><span>一到就先做這件事。指定 12:00 場次。TEL 086-422-0542</span></span></li>
+      <li><span class="t">09:40</span><span class="c"><b>大原美術館</b><span>本館・工藝東洋館・兒島虎次郎記念館。9:00–17:00（最終入館 16:30）。一般 ¥2,000、18 歲以下 ¥500。抓 2 小時</span></span></li>
+      <li><span class="t">12:00</span><span class="c"><b>倉敷川 川舟流</b><span>約 20 分，大人 ¥700。從水面看白壁街道，是這裡最經典的視角</span></span></li>
+      <li><span class="t">12:30</span><span class="c"><b>午餐</b><span>美觀地區內</span></span></li>
+      <li><span class="t">14:00</span><span class="c"><b>語らい座 大原本邸</b><span>大原孫三郎故居。9:00–17:00（最終入館 16:30），一般 ¥500。附書店咖啡與庭園</span></span></li>
+      <li><span class="t">15:00</span><span class="c"><b>大橋家住宅</b><span>國指定重要文化財，江戶商家建築。9:00–17:00，大人 ¥550</span></span></li>
+      <li><span class="t">15:45</span><span class="c"><b>阿智神社</b><span>倉敷總鎮守。位於鶴形山上，可俯瞰整片街區</span></span></li>
+      <li><span class="t">16:30</span><span class="c"><b>倉敷常春藤廣場・牛仔褲街</b><span>購物與咖啡時間</span></span></li>
+      <li><span class="t">17:00</span><span class="c"><b>夜間景觀照明開始</b><span>10–3 月為「日落至 21:00」。11 月底日落約 17:00</span></span></li>
+      <li><span class="t">17:30</span><span class="c"><b>夜景散步＋晚餐</b><span>倉敷川的白壁倒影是招牌畫面</span></span></li>
+      <li><span class="t">19:30</span><span class="c"><b>JR 返回岡山</b></span></li>
+    </ul>
+    <p style="margin:12px 0 0;font-size:.88rem;color:var(--sub)">
+      三人門票合計約 <b>¥11,250</b>（美術館 6,000 ＋ 川舟 2,100 ＋ 大原本邸 1,500 ＋ 大橋家 1,650）
+    </p>
+  </div>
+
+  <div class="card">
+    <h3>★ 全天唯一要搶的東西：川舟票</h3>
+    <table class="kv">
+      <tr><th>販售地點</th><td><b>倉敷館觀光案內所</b>（僅此一處）</td></tr>
+      <tr><th>販售方式</th><td><b>當天 9:00 起，一次賣完全部時段，先到先得</b></td></tr>
+      <tr><th>可否預約</th><td><b>不可預約</b></td></tr>
+      <tr><th>運航時間</th><td>9:30–17:00，每 30 分一班，單趟約 20 分</td></tr>
+      <tr><th>票價</th><td>大人 ¥700／兒童（5 歲–小學生）¥350</td></tr>
+      <tr><th>11/24 運休？</th><td>否。定休為 3–12 月的<b>第二個週一</b>，11/24 正常運航</td></tr>
+    </table>
+    <div class="note">
+      <b>動線就是為它設計的。</b>大原美術館 9:00 開門但不會客滿，川舟會賣完——
+      所以先買票、再進美術館。若抵達時已無票，直接跳過，其餘行程不受影響。
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>11/24（週二）開關門總表</h3>
+    <div class="scroll">
+      <table class="dt">
+        <tr><th>設施</th><th>11/24</th><th>時間</th><th>成人票</th></tr>
+        <tr><td>大原美術館</td><td style="color:var(--ok)"><b>開</b></td><td>9:00–17:00（最終 16:30）</td><td>¥2,000</td></tr>
+        <tr><td>語らい座 大原本邸</td><td style="color:var(--ok)"><b>開</b></td><td>9:00–17:00（最終 16:30）</td><td>¥500</td></tr>
+        <tr><td>大橋家住宅</td><td style="color:var(--ok)"><b>開</b></td><td>9:00–17:00</td><td>¥550</td></tr>
+        <tr><td>倉敷川 川舟流</td><td style="color:var(--ok)"><b>開</b></td><td>9:30–17:00</td><td>¥700</td></tr>
+        <tr><td>倉敷民藝館</td><td style="color:#b91c1c"><b>休</b></td><td>—</td><td>—</td></tr>
+        <tr><td>倉敷考古館</td><td style="color:#b91c1c"><b>休</b></td><td>—</td><td>—</td></tr>
+      </table>
+    </div>
+    <div class="note">
+      <b>兩間關門的原因不同：</b>
+      <ul style="margin:6px 0 0;padding-left:18px">
+        <li><b>倉敷民藝館</b>——規則是「週一休館，<b>遇假日則順延翌日</b>」。11/23 是週一兼勤勞感謝日，因此順延到 <b>11/24 休館</b>。</li>
+        <li><b>倉敷考古館</b>——常態即<b>週一至週四休館</b>，只在週五、六、日開。</li>
+      </ul>
+      兩間都是小型館，不看不影響行程完整性。
+    </div>
+    <div class="good">
+      <b>大原美術館 11/24 確定開館。</b>該館規則為「週一休館，遇假日、補假則照常開館」，
+      且<b>沒有</b>順延至週二的條款——與民藝館的差別就在這裡。
+      已用 2026 年 9 月同型案例交叉驗證（9/21 一・敬老之日開館、9/22 二・補假日開館）。
+    </div>
+    <div class="note">
+      <b>唯一保留：</b>大原美術館官方開館日曆目前只公布到 2026 年 9 月，11 月尚未上線；
+      且 9/28、9/29 曾出現連續兩天「臨時休館」的先例。<b>請於 10 月後至官網日曆再查一次。</b>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>為什麼 11/24 是最好的一天</h3>
+    <ul style="margin:0;padding-left:18px;font-size:.9rem">
+      <li><b>人潮最少</b>：11/23 是三連休最後一天，11/24 週二明顯清空。</li>
+      <li><b>白天與夜晚一次拿下</b>：11 月底日落約 17:00，照明<b>17:00 就開始</b>亮到 21:00。不必熬夜，傍晚順順散步就能看到兩種倉敷。夏季得等 19:00 後才暗。</li>
+      <li><b>雨天不必改行程</b>：大原美術館、大原本邸、大橋家住宅、常春藤廣場全是室內或有頂空間。唯一受影響的是川舟流。</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>倉敷限定的買與吃</h3>
+    <table class="kv">
+      <tr><th>紙膠帶</th><td>mt 品牌母公司<b>卡莫井加工紙</b>就在倉敷，這裡是日本紙膠帶發源地，款式最齊</td></tr>
+      <tr><th>倉敷帆布</th><td>厚實帆布包，當地紡織工業的代表作</td></tr>
+      <tr><th>牛仔褲週邊</th><td>牛仔褲街有丹寧霜淇淋、丹寧包子等限定食物</td></tr>
+      <tr><th>在地小吃</th><td>多蜜醬豬排飯、金賞可樂餅、醋漬小魚（ままかり）、祭壽司</td></tr>
+    </table>
+    <div class="note">
+      <b>本節未列店名。</b>餐廳營業時間與公休日變動頻繁，我沒有逐一查證。建議當天用 Google Maps 即時確認。<br>
+      <b>水果聖代提醒：</b>白桃（7–8 月）與晴王葡萄（8–10 月）11 月底皆已過季，屆時會換成當季水果。
+    </div>
+  </div>
+
+  <div class="card" style="background:var(--tagbg);border:none">
+    <h3 style="margin-bottom:8px">不建議順道去兒島牛仔褲街</h3>
+    <p style="margin:0;font-size:.88rem">
+      兒島從倉敷還要搭 JR 約 30 分，來回一小時，會把上面這份完整的美觀地區行程壓縮掉。
+      你們只有這一天在倉敷，把時間留在美觀地區的密度更高。
+    </p>
+  </div>
+</section>
+
+<!-- ============ DAY 3 ============ -->
+<section id="d3">
+  <h2><span class="n">D3</span>11/25（三）備前燒之鄉 · 伊部</h2>
+
+  <div class="card">
+    <span class="tag">需事前預約</span>
+    <span class="tag">全程步行圈</span>
+    <ul class="tl">
+      <li><span class="t">09:00</span><span class="c"><b>JR 岡山站 → 伊部站</b><span>赤穗線直達，約 35–40 分。班次不密集，出發前先查好回程時刻</span></span></li>
+      <li><span class="t">09:45</span><span class="c"><b>備前燒傳統產業會館</b><span>出站即到。1F 販售、2F 展示</span></span></li>
+      <li><span class="t">10:30</span><span class="c"><b>夢幻庵備前燒工房　手捏體驗</b><span>伊部 2697。受付 9:00–16:00。緋襷燒成手捏 0.5kg ¥2,750／人，約 1 小時。三人共 ¥8,250</span></span></li>
+      <li><span class="t">12:00</span><span class="c"><b>午餐</b><span>工房內附設 cafe MUGENAN＋，或伊部街上</span></span></li>
+      <li><span class="t">13:30</span><span class="c"><b>窯元街散步</b><span>登窯煙囪街景、天津神社（備前燒狛犬與屋瓦）、選購現貨器皿</span></span></li>
+      <li><span class="t">15:30</span><span class="c"><b>JR 返回岡山</b></span></li>
+      <li><span class="t">17:00</span><span class="c"><b>（彈性）後樂園幻想庭園補看</b><span>若 D1 天候不佳</span></span></li>
+    </ul>
+
+    <div class="note">
+      <b>三件必須先處理的事：</b>
+      <ol style="margin:8px 0 0;padding-left:18px">
+        <li><b>備前燒傳統產業會館的土捏體驗只在週六日與國定假日辦理</b>，11/25 是週三，<b>不辦</b>。故改至夢幻庵。</li>
+        <li><b>成品交付需 2–4 個月</b>（夢幻庵官網明載），約 2027 年 1–3 月才好。</li>
+        <li><b>海外寄送未獲確認。</b>官網只寫「送料別」，沒有明文承諾寄海外。請先寄信詢問（見「詢問信」章節）。</li>
+      </ol>
+    </div>
+
+    <div class="card" style="margin:14px 0 0;background:var(--tagbg);border:none">
+      <h3 style="margin-bottom:8px">備案：若不做體驗</h3>
+      <p style="margin:0;font-size:.88rem">
+        直接改成「窯元街購物日」。現貨當天就能帶走，選擇也更多，且完全不必處理寄送問題。
+        備前燒不上釉、靠柴窯自然落灰成色，每件皆不同，慢慢挑本身就是樂趣。
+      </p>
+    </div>
+
+    <div class="card" style="margin:14px 0 0;background:var(--tagbg);border:none">
+      <h3 style="margin-bottom:8px">備案：英文導覽套裝</h3>
+      <p style="margin:0 0 6px;font-size:.88rem">
+        <b>Heartland Japan「Half-day Tour of Dirt and Fire」</b>是目前<b>唯一公開承諾海外寄送</b>的管道。
+      </p>
+      <table class="kv">
+        <tr><th>語言</th><td>英文・西班牙文導遊</td></tr>
+        <tr><th>內容</th><td>伊部老街導覽 → 天津神社參拜 → 桃蹊堂手捏體驗 → 備前燒抹茶</td></tr>
+        <tr><th>時間</th><td>13:00–17:00（4 小時）</td></tr>
+        <tr><th>費用</th><td>¥15,000／人（三人 ¥45,000）</td></tr>
+        <tr><th>海外運費</th><td>亞洲 ¥1,850 起</td></tr>
+        <tr><th>申請期限</th><td>出發日 10 天前</td></tr>
+      </table>
+      <p style="margin:8px 0 0;font-size:.84rem;color:var(--warn)">
+        ※ 其網頁措辭偏向旅行社對接（B2B），<b>是否受理散客需先來信確認</b>。
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DAY 4 ============ -->
+<section id="d4">
+  <h2><span class="n">D4</span>11/26（四）岡山市區深度</h2>
+
+  <div class="card">
+    <span class="tag">路面電車一日行動</span>
+    <ul class="tl">
+      <li><span class="t">09:00</span><span class="c"><b>後樂園（白天）</b><span>日本三名園之一。與 D1 的夜間點燈是完全不同的樣貌，值得再訪一次</span></span></li>
+      <li><span class="t">11:00</span><span class="c"><b>岡山城</b><span>黑色天守「烏城」，與後樂園相鄰步行可達。【需確認】開放時間與門票請查官網</span></span></li>
+      <li><span class="t">12:30</span><span class="c"><b>午餐</b></span></li>
+      <li><span class="t">14:00</span><span class="c"><b>表町商店街</b><span>岡山最主要的老商店街，天滿屋岡山本店在此</span></span></li>
+      <li><span class="t">16:00</span><span class="c"><b>岡山站周邊購物</b><span>AEON MALL 岡山、站內 SUNSTATION TERRACE（さんすて岡山）</span></span></li>
+      <li><span class="t">18:30</span><span class="c"><b>晚餐</b><span>今晚可安排較正式的一餐</span></span></li>
+    </ul>
+    <div class="good">
+      <b>路面電車小知識：</b>岡山電氣軌道分東山線與清輝橋線，市中心區間為均一票價。
+      從岡山站前到城下（後樂園、岡山城方向）約 5 分鐘。
+    </div>
+  </div>
+</section>
+
+<!-- ============ DAY 5 ============ -->
+<section id="d5">
+  <h2><span class="n">D5</span>11/27（五）早晨採買 · 返程</h2>
+
+  <div class="card">
+    <span class="tag">只有早上</span>
+    <span class="tag">巴士 12:55 發車</span>
+    <ul class="tl">
+      <li><span class="t">08:00</span><span class="c"><b>早餐、整理行李</b></span></li>
+      <li><span class="t">09:30</span><span class="c"><b>退房，行李寄放</b><span>拖到岡山站，寄放於車站置物櫃</span></span></li>
+      <li><span class="t">10:00</span><span class="c"><b>最後採買</b><span>さんすて岡山（站內）伴手禮最集中，AEON MALL 岡山就在站旁</span></span></li>
+      <li><span class="t">12:20</span><span class="c"><b>取行李，前往西口巴士乘車處</b><span>乘車處在<b>西口候車室內</b>，不是後樂園那側的東口</span></span></li>
+      <li><span class="t">12:55</span><span class="c"><b>機場利木津巴士發車</b><span>車程約 30 分</span></span></li>
+      <li><span class="t">13:25</span><span class="c"><b>抵達岡山桃太郎機場</b><span>報到、出境。距起飛尚有 2 小時，從容</span></span></li>
+      <li><span class="t">15:25</span><span class="c"><b>IT215 起飛</b><span>飛行 3 小時 5 分</span></span></li>
+      <li><span class="t">17:30</span><span class="c"><b>抵達桃園</b></span></li>
+    </ul>
+    <div class="note">
+      <b>不要壓線，而且比原本更緊。</b>回程實際時刻是 <b>15:25</b>，比我先前引用的夏季班表早了 30 分鐘。
+      12:55 這班巴士 13:25 抵達，仍有 2 小時緩衝，<b>但下一班就一定趕不上</b>。
+      建議 12:20 就到西口，寧可在候車室多坐半小時。
+    </div>
+  </div>
+</section>
+
+<!-- ============ 備選方案 ============ -->
+<section id="alt">
+  <h2><span class="n">07</span>備選方案與延伸靈感</h2>
+  <div class="note">
+    <b>來源說明：</b>本節內容整理自另一份手繪風格行程圖（原設定為 9 月出發），
+    <b>時間、票價、班次、店家營業狀況均未逐一查證</b>，僅作為靈感與地點清單。
+    採用前請自行核對最新資訊。現有 D1–D5 的正式行程不受影響。
+  </div>
+
+  <div class="card">
+    <h3>可替代 D3 備前燒的一日方案：尾道貓町散策</h3>
+    <p style="margin:0 0 10px;font-size:.9rem">
+      若備前燒體驗因海外寄送問題卡關，或想換成海景＋貓咪主題的一天，尾道是岡山近郊常見的替代選擇。
+    </p>
+    <ul class="tl">
+      <li><span class="t">—</span><span class="c"><b>岡山 → 福山 → 尾道</b><span>新幹線＋JR 在來線轉乘，單趟【待查證】約 35–40 分</span></span></li>
+      <li><span class="t">—</span><span class="c"><b>千光寺山纜車</b><span>山頂俯瞰尾道港灣與造船廠，單程票價【待查證】</span></span></li>
+      <li><span class="t">—</span><span class="c"><b>尾道本通商店街散策</b><span>貓咪出沒的階梯小巷、桂馬蒲鉾魚板老店</span></span></li>
+      <li><span class="t">—</span><span class="c"><b>小野貓布丁</b><span>獨立布丁小店，抹茶與桃醬口味【店名待核實現況營業】</span></span></li>
+    </ul>
+    <div class="note">
+      <b>取捨考量：</b>尾道來回車程比伊部（備前）更長，且不含手作陶藝體驗，較適合單純散步賞景。
+      若決定改走這條路線，D3 的備前燒工房預約需提前取消。
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>可替代 D4 上午的路線：吉備路桃太郎傳說</h3>
+    <p style="margin:0 0 10px;font-size:.9rem">
+      D4 目前安排是後樂園（白天）＋岡山城＋表町商店街。若想換個主題，
+      吉備線沿線的神社群是岡山「桃太郎傳說發源地」，步調較悠閒。
+    </p>
+    <table class="kv">
+      <tr><th>路線</th><td>岡山 → 吉備津 → 備前一宮 → 岡山（JR 吉備線／通稱桃太郎線）</td></tr>
+      <tr><th>吉備津神社</th><td>比翼入母屋造本殿，桃太郎傳說「溫羅退治」相關社</td></tr>
+      <tr><th>吉備津彦神社</th><td>祈求良緣，桃太郎造型陶籤【御守內容待核實現況】</td></tr>
+      <tr><th>午餐</th><td>一照庵——當地烏龍麵搭配雞皮餃子，位於吉備津站周邊【店名待核實現況營業】</td></tr>
+    </table>
+    <div class="note">
+      這條路線與現有 D4 的岡山城／商店街主題不衝突，也可以只挑半天插入，
+      下午再銜接回表町商店街購物。
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>岡山市區・具體店名補充</h3>
+    <p style="margin:0 0 10px;font-size:.9rem">
+      現有「岡山美食清單」刻意未列店名（避免營業時間誤導）。以下是圖片來源提到的幾家，
+      可作為 D1 或 D4 晚餐的候選，抵達後仍請用 Google Maps 確認營業狀況。
+    </p>
+    <table class="kv">
+      <tr><th>明神丸</th><td>炙燒鰹魚、鰹魚高湯麵；圖片來源列出岡山白桃、香印葡萄等季節配菜，<b>11 月底已過產季，屆時菜色會不同</b></td></tr>
+      <tr><th>讚岐の男うどん</th><td>岡山車站內烏龍麵，適合轉車空檔用餐</td></tr>
+      <tr><th>肉匠松屋</th><td>和牛燒肉，適合安排較正式的一餐</td></tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <h3>倉敷（D2）加碼景點與店名</h3>
+    <p style="margin:0 0 10px;font-size:.9rem">
+      現有 D2 已提到紙膠帶發源地與牛仔褲街，以下補上具體店名與幾個順路小站：
+    </p>
+    <table class="kv">
+      <tr><th>如竹堂</th><td>紙膠帶專門店，款式多樣</td></tr>
+      <tr><th>有鄰庵</th><td>山豬肉丼飯（山豬肉搭配特製醬汁），美觀地區內</td></tr>
+      <tr><th>街道扭蛋</th><td>倉敷白壁造型磁鐵、木製迷你屋等地區限定扭蛋機</td></tr>
+      <tr><th>常春藤廣場</th><td>牛仔外套＋牛仔褲造型吊飾等常春藤廣場限定周邊</td></tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <h3>生活雜貨與伴手禮補貨點</h3>
+    <table class="kv">
+      <tr><th>GU</th><td>岡山市區有分店，可補買衣物</td></tr>
+      <tr><th>Workman</th><td>北長瀨站周邊，戶外用品與生活雜貨，價格實惠</td></tr>
+      <tr><th>AEON</th><td>岡山站周邊，適合最後一天採買食材與伴手禮零食</td></tr>
+      <tr><th>岡山站站內商店</th><td>伴手禮補買，適合 D5 早上時間有限時使用</td></tr>
+    </table>
+  </div>
+</section>
+
+<!-- ============ 交通速查 ============ -->
+<section id="traffic">
+  <h2><span class="n">02</span>交通速查</h2>
+
+  <div class="card">
+    <h3>機場 ⇄ 岡山站</h3>
+    <table class="kv">
+      <tr><th>乘車處</th><td><b>岡山站西口候車室內</b>（非東口）</td></tr>
+      <tr><th>機場側</th><td>航廈中央附近 2 號乘車處</td></tr>
+      <tr><th>車程</th><td>約 30 分</td></tr>
+      <tr><th>班距</th><td>約 2 小時 1–2 班；另有配合國際線抵達的加班車</td></tr>
+      <tr><th>購票</th><td>乘車處自動售票機；可用 ICOCA／Suica／ハレカ 等 IC 卡</td></tr>
+      <tr><th>去程關鍵班次</th><td>11/27 <b>12:55</b> 岡山站西口發車</td></tr>
+    </table>
+    <div class="note">
+      <b>加班車注意：</b>配合國際線抵達的加班車是在班機落地後固定時間發車，
+      不會久候。落地後請盡快前往巴士乘車處。
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>各日移動方式</h3>
+    <div class="scroll">
+      <table class="dt">
+        <tr><th>日期</th><th>目的地</th><th>路線</th><th>時間</th></tr>
+        <tr><td>11/24</td><td>倉敷</td><td>JR 山陽本線　岡山 → 倉敷</td><td>約 17 分</td></tr>
+        <tr><td>11/25</td><td>伊部（備前）</td><td>JR 赤穗線　岡山 → 伊部</td><td>約 35–40 分</td></tr>
+        <tr><td>11/26</td><td>後樂園・岡山城</td><td>路面電車　岡山站前 → 城下</td><td>約 5 分</td></tr>
+      </table>
+    </div>
+    <div class="note">
+      <b>JR 班次不密集。</b>赤穗線與桃太郎線都不是高頻路線，
+      <b>出發前先查好回程時刻</b>，錯過一班可能要等 30 分鐘以上。
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>要不要買 JR PASS？</h3>
+    <p style="margin:0;font-size:.9rem">
+      這趟行程只在岡山近郊短程移動（倉敷 17 分、伊部 40 分），
+      <b>單程票累計金額很難回本</b>，不建議買廣域 PASS。
+      建議直接用 <b>ICOCA 或 Suica</b> 感應進出，市區路面電車也通用。
+    </p>
+  </div>
+</section>
+
+<!-- ============ 美食 ============ -->
+<section id="food">
+  <h2><span class="n">03</span>岡山美食清單</h2>
+
+  <div class="card">
+    <h3>必試的在地菜色</h3>
+    <div class="scroll">
+      <table class="dt">
+        <tr><th>名稱</th><th>說明</th></tr>
+        <tr><td><b>祭壽司（ばら寿司）</b></td><td>岡山散壽司。江戶時代藩主頒布儉約令，庶民把配料藏在飯下規避規定，因而發展成鋪滿海鮮的華麗一碗</td></tr>
+        <tr><td><b>ままかり</b></td><td>醋漬小魚。名字典故是「好吃到要跟鄰居借飯（まま＝飯、かり＝借）」</td></tr>
+        <tr><td><b>多蜜醬豬排飯</b></td><td>デミカツ丼。炸豬排淋多蜜醬，岡山獨有的吃法</td></tr>
+        <tr><td><b>蝦飯（えびめし）</b></td><td>黑色炒飯配蝦仁，岡山靈魂食物</td></tr>
+        <tr><td><b>黍團子（きびだんご）</b></td><td>桃太郎傳說的象徵，最經典的伴手禮</td></tr>
+        <tr><td><b>瀨戶內海鮮</b></td><td>11 月起牡蠣進入季節</td></tr>
+      </table>
+    </div>
+    <div class="note">
+      <b>水果季節提醒：</b>岡山以白桃與晴王麝香葡萄聞名，但<b>白桃產季是 7–8 月、葡萄約 8–10 月</b>，
+      11 月底皆已過季。屆時能買到的主要是果凍、果汁等<b>加工品</b>，不會有新鮮水果採摘體驗。
+    </div>
+    <div class="note">
+      <b>本節未含具體店名。</b>餐廳的營業時間、公休日與是否需訂位變動頻繁，
+      我沒有逐一查證，因此不列店名以免誤導。建議抵達後用 Google Maps 或 Tabelog 即時查詢。
+    </div>
+  </div>
+</section>
+
+<!-- ============ 待辦 ============ -->
+<section id="todo">
+  <h2><span class="n">04</span>出發前待辦清單</h2>
+
+  <div class="card">
+    <h3>立刻處理（本週內）</h3>
+    <ul class="chk">
+      <li><input type="checkbox" id="c1"><label for="c1">訂 Zen house 2 的 <b>11/23 那晚</b><span class="when">11/21–23 是日本三連休，加上點燈檔期，這晚最搶手。多數平台有免費取消期限，先卡位不吃虧</span></label></li>
+      <li><input type="checkbox" id="c2"><label for="c2">確認 Zen house 2 的價格是「每晚」或「4 晚總價」<span class="when">兩者差 4 倍，直接影響是否改選飯店</span></label></li>
+      <li><input type="checkbox" id="c3"><label for="c3">確認 Zen house 2 的平方公尺數、是否附洗衣機、電梯<span class="when">Booking.com 頁面上會直接標示</span></label></li>
+      <li><input type="checkbox" id="c4"><label for="c4">向房東索取門口照片與自助入住說明<span class="when">抵達當天天已黑，這關係到第一晚順不順</span></label></li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>近期處理（8–9 月）</h3>
+    <ul class="chk">
+      <li><input type="checkbox" id="c5"><label for="c5">寄信問夢幻庵：作品能否寄台灣、運費多少<span class="when">art@mugenan.co.jp（信件範本見下節）</span></label></li>
+      <li><input type="checkbox" id="c6"><label for="c6">（選）問 Heartland Japan 是否受理散客<span class="when">若重視英文導覽與明確的寄送保證</span></label></li>
+      <li><input type="checkbox" id="c7" checked><label for="c7"><s>訂機票</s>　<b style="color:var(--ok)">✓ 已完成</b><span class="when">已開票確認，三人來回總價 TWD 49,143（IT214 11/23／IT215 11/27）</span></label></li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>行前確認（10 月後）</h3>
+    <ul class="chk">
+      <li><input type="checkbox" id="c8"><label for="c8">確認航班無異動通知<span class="when">班表已依訂位系統更新（IT214 11:10／IT215 15:25），但訂位頁註明「依官方最終核准為主」</span></label></li>
+      <li><input type="checkbox" id="c9"><label for="c9"><b>查大原美術館 11 月開館日曆</b><span class="when">官網日曆目前只到 9 月。該館有臨時休館先例</span></label></li>
+      <li><input type="checkbox" id="c10"><label for="c10">預約夢幻庵陶藝體驗（11/25）<span class="when">不能現場碰運氣，一定要事前預約</span></label></li>
+      <li><input type="checkbox" id="c11"><label for="c11">確認後樂園幻想庭園當年度公告無異動</label></li>
+      <li><input type="checkbox" id="c12"><label for="c12">確認赤穗線、山陽本線的當日時刻表</label></li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>行李與準備</h3>
+    <ul class="chk">
+      <li><input type="checkbox" id="c13"><label for="c13">保暖外套<span class="when">11 月底岡山日均溫約 8–15°C，早晚溫差大，夜間看點燈會冷</span></label></li>
+      <li><input type="checkbox" id="c14"><label for="c14">好走的鞋<span class="when">倉敷、伊部、後樂園都是長距離步行</span></label></li>
+      <li><input type="checkbox" id="c15"><label for="c15">ICOCA / Suica 或現金<span class="when">部分小店與窯元僅收現金</span></label></li>
+      <li><input type="checkbox" id="c16"><label for="c16">護照影本<span class="when">民泊入住需登記住宿者名簿</span></label></li>
+      <li><input type="checkbox" id="c17"><label for="c17">若住處有洗衣機，衣物可減半<span class="when">五天四夜只需帶 2–3 套</span></label></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ 詢問信 ============ -->
+<section id="mail">
+  <h2><span class="n">05</span>詢問信範本</h2>
+
+  <div class="card">
+    <h3>給夢幻庵備前燒工房 <small>日文 · art@mugenan.co.jp</small></h3>
+    <pre id="m1">件名：陶芸体験の作品の海外発送について（台湾在住）
+
+ご担当者様
+
+台湾から11月25日（水）に3名で伺いたく、
+手びねり体験（緋襷焼成 0.5kg）を検討しております。
+
+つきましては、以下2点についてお伺いいたします。
+
+1. 完成した作品を台湾へ国際発送していただくことは
+   可能でしょうか。
+2. 可能な場合、送料の目安をお教えいただけますでしょうか。
+
+お忙しいところ恐れ入りますが、
+ご回答いただけますと幸いです。
+
+（お名前）</pre>
+    <button class="copy" onclick="cp('m1',this)">複製信件內容</button>
+  </div>
+
+  <div class="card">
+    <h3>給 Heartland Japan <small>英文</small></h3>
+    <pre id="m2">Subject: Inquiry — Bizen Pottery Half-day Tour on Nov 25, 2026 (3 pax from Taiwan)
+
+Hello,
+
+We are a family of three travelling from Taiwan and are
+interested in your "Half-day Tour of Dirt and Fire" in Bizen
+on Wednesday, 25 November 2026.
+
+Could you please confirm:
+
+1. Do you accept direct bookings from individual travellers
+   (not through an agent)?
+2. Is the tour available on that date, and is the JPY 15,000
+   per person rate current?
+3. Please confirm the overseas shipping fee to Taiwan for
+   three pieces.
+
+Thank you for your help.
+
+Tom</pre>
+    <button class="copy" onclick="cp('m2',this)">複製信件內容</button>
+  </div>
+</section>
+
+<!-- ============ 連結 ============ -->
+<section id="links">
+  <h2><span class="n">06</span>官方連結</h2>
+  <div class="card">
+    <ul class="links" style="margin:0;padding-left:18px">
+      <li><a href="https://www.okayama-airport.org/tw/timetable/taipei" target="_blank">岡山桃太郎機場　台北線時刻表</a></li>
+      <li><a href="http://www.chutetsu-bus.co.jp/rosen/rimujin.htm" target="_blank">中鐵巴士　機場利木津巴士</a></li>
+      <li><a href="https://okayama-korakuen.jp/" target="_blank">岡山後樂園　官網</a></li>
+      <li><a href="http://genso-teien.okayama.jp/" target="_blank">後樂園「幻想庭園」專頁</a></li>
+      <li><a href="https://www.ohara.or.jp/calendar/" target="_blank">大原美術館　開館日曆（10 月後再查）</a></li>
+      <li><a href="https://www.ohara.or.jp/visitor_info/" target="_blank">大原美術館　入館資訊</a></li>
+      <li><a href="https://mugenan.co.jp/ceramics/" target="_blank">夢幻庵　陶藝體驗與線上預約</a></li>
+      <li><a href="https://touyuukai.jp/trial.html" target="_blank">備前燒陶友會　體驗窯元一覽</a></li>
+      <li><a href="https://touyuukai.jp/en-index.html" target="_blank">備前燒陶友會　英文站</a></li>
+      <li><a href="https://heartlandjapan.com/experiences/half-day-tour-of-dirt-and-fire-a-walk-around-the-pottery-town-imbe-and-bizen-yaki-pottery-making/" target="_blank">Heartland Japan　備前半日導覽</a></li>
+      <li><a href="https://www.okayama-kanko.jp/" target="_blank">岡山觀光 WEB（官方）</a></li>
+      <li><a href="https://www.okayama-japan.jp/tw" target="_blank">岡山縣官方觀光　繁體中文</a></li>
+    </ul>
+  </div>
+</section>
+
+<footer>
+  岡山家族旅行手冊　·　2026/11/23–27<br>
+  資料查證日：2026 年 7 月 20 日<br>
+  <span style="color:var(--warn)">標示「需確認」「待確認」的項目，出發前請務必重新核對。</span>
+</footer>
+
+</div>
+
+<script>
+function cp(id,btn){
+  var t=document.getElementById(id).innerText;
+  var done=function(){
+    var o=btn.innerText; btn.innerText='已複製 ✓';
+    setTimeout(function(){btn.innerText=o},1600);
+  };
+  if(navigator.clipboard&&window.isSecureContext){
+    navigator.clipboard.writeText(t).then(done,fallback);
+  }else{fallback();}
+  function fallback(){
+    var ta=document.createElement('textarea');
+    ta.value=t;ta.style.position='fixed';ta.style.opacity='0';
+    document.body.appendChild(ta);ta.select();
+    try{document.execCommand('copy');done();}catch(e){}
+    document.body.removeChild(ta);
+  }
+}
+/* 勾選狀態保存於本次瀏覽 */
+document.querySelectorAll('.chk input').forEach(function(b){
+  b.addEventListener('change',function(){
+    b.parentElement.style.opacity=b.checked?'.45':'1';
+  });
+});
+</script>
+
+</body>
+</html>
